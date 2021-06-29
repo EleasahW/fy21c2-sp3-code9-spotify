@@ -92,7 +92,7 @@
                     <div class="emily w-36 rounded-full pl-1 pr-2 bg-black-basic custom-shadow text-white-basic flex justify-between items-center">
                         <div class="flex items-center">
                             <img class="rounded-full" src="images/emily.png" alt="emily's avatar">
-                            <a href="readme.md" style="text-decoration: none"><span class="ml-2 text-xs">Emily Adams</span></a>
+                            <a href="readme.md"><span class="ml-2 text-xs">Emily Adams</span></a>
                         </div>
                         <i class="fa fa-caret-down"></i>
                     </div>
@@ -161,7 +161,7 @@
                 <div class="flex justify-between text-white-basic">
                     <!-- panel 1 -->
                     <div class="album-panel mr-1.5">
-                        <div class="album w-32 h-32">
+                        <div class="w-32 h-32 album shadow-light">
                             <img src="images/be-happy.png" width="127px" alt="album art"/>
                         </div>
                         <div class="w-32 flex flex-col align-bottom">
@@ -171,7 +171,7 @@
                     </div>
                     <!-- etc. -->
                     <div class="album-panel mr-1.5">
-                        <div class="album w-32 h-32 ">
+                        <div class="w-32 h-32 album shadow-light">
                             <img src="images/some-days.png" width="127px" alt="album art"/>
                         </div>
                         <div class="w-32 flex flex-col align-bottom">
@@ -181,7 +181,7 @@
                     </div>
 
                     <div class="album-panel mr-1.5">
-                        <div class="album w-32 h-32">
+                        <div class="w-32 h-32 album shadow-light">
                             <img src="images/chime.png" width="127px" alt="album art"/>
                         </div>
                         <div class="w-32 flex flex-col align-bottom">
@@ -191,7 +191,7 @@
                     </div>
 
                     <div class="album-panel mr-1.5">
-                        <div class="album w-32 h-32">
+                        <div class="w-32 h-32 album shadow-light">
                             <img src="images/runaway.png" width="127px" height="127px" alt="album art"/>
                         </div>
                         <div class="w-32 flex flex-col align-bottom">
@@ -201,7 +201,7 @@
                     </div>
 
                     <div class="album-panel">
-                        <div class="album w-32 h-32">
+                        <div class="w-32 h-32 album shadow-light">
                             <img src="images/in-your-car.png" width="127px" height="127px" alt="album art"/>
                         </div>
                         <div class="w-32 flex flex-col align-bottom">
@@ -239,7 +239,7 @@
                     <i class="material-icons text-gray-controls">skip_previous</i>
                 </div>
                 <div id="play-pause" class="w-8 h-8 rounded-full bg-black-basic flex justify-center items-center">
-                    <i class="material-icons text-white-basic"
+                    <i id="pp-icon" class="material-icons text-white-basic"
                       style="font-size: 38px">play_circle_filled</i>
                 </div>
                 <div class="w-14 flex justify-between items-center text-sm">
@@ -269,5 +269,7 @@
         </div>
     </div>
 
+    <script src="src/toggle.js"></script>
 </body>
+
 </html>
