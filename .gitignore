@@ -3,3 +3,5 @@
 node_modules
 ref
 src/tailwind.css
+yarn.lock
+tailwind.css
