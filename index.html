@@ -19,20 +19,22 @@
 
 <body>
     <!-- side menu and main container, approx 1064px wide?-->
-    <div id="home-popup" class="w-full h-full bg-gray-artist opacity-20 hidden fixed">
-        <!--invisible + absolute + move to top of page add-->
-        <div id="home-popup-main" class="w-96 h-96 p-9 bg-black-basic text-white-basic self-center">
-            <i class="fa fa-spotify"></i>
-            <h3>Spotify</h3>
-            <h2>Millions of songs.</h2>
-            <h2>Free on Spotify.</h2>
-            <a href="#" class="uppercase">Log In</a>
-            <p class="font-thin text-gray-artist">Don't have an account? <a href="#" class="font-thin">SIGN UP</a></p>
+    <div id="home-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center">
+        <!--hidden + bg blur-->
+        <div id="home-popup-main" class="w-max h-max p-9 bg-black-basic text-white-basic opacity-100 rounded-xl text-center">
+            <div id="spotify-header" class="flex text-4xl justify-center pt-3">
+                <p><i class="fa fa-spotify"></i></p>
+                <h3 class="mx-1 text-2xl pt-1.5 pb-16">Spotify</h3>
+            </div>
+            <h2 class="text-3xl">Millions of songs.</h2>
+            <h2 class="text-3xl">Free on Spotify.</h2>
+            <input type="submit" value="Log In" class="bg-green-play uppercase mx-12 mt-12 mb-10 py-2.5 px-32 rounded-3xl">
+            <p class="font-thin text-gray-artist">Don't have an account? <a href="#" class="font-thin underline text-gray-elapsed">SIGNUP</a></p>
         </div>
     </div>
-    <div id="login-popup" class="w-full h-full bg-gray-artist opacity-20 hidden fixed">
-        <!--invisible + absolute add + move to top of page-->
-        <div id="login-popup-main" class="w-96 h-96 bg-black text-white-basic self-center">
+    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center hidden">
+        <!--hidden + bg blur -->
+        <div id="login-popup-main" class="w-96 h-96 bg-black-basic text-white-basic opacity-100">
             <h3><i class="fa fa-spotify"></i> Spotify</h3>
             <h2>Log in to continue.</h2>
             <div id="username" class="">

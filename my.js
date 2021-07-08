@@ -1,17 +1,15 @@
 // Pseudo code
 
 // 1 Make home-popup pop up in center
-
-
 // 1. connect home-popup w/ console
 const homeOverlay = document.querySelector('#home-popup');
 console.log(homeOverlay);
 
 
 // 2. have an overlay that pops up on load
+document.getElementById(homeOverlay).addEventListener("load", homeOverlayOn);
 
-function on() {
-    document.getElementById(homeOverlay).addEventListener("load", on())
+function homeOverlayOn() {
     document.getElementById(homeOverlay).style.display = "block";
 
 }
