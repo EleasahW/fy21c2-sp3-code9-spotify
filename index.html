@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone">
 <!--    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> not working...-->
 </head>
 
@@ -33,7 +34,7 @@
             <p class="font-thin text-gray-artist">Don't have an account? <a href="#" class="font-thin underline text-gray-elapsed">SIGNUP</a></p>
         </div>
     </div>
-    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center">
+    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center block overflow-y-scroll">
         <!--hidden + bg blur -->
         <div id="login-popup-main" class="w-max h-max bg-black-basic text-white-basic opacity-100 rounded-xl">
             <div id="brand-header" class="flex text-5xl justify-center pt-3 mt-10">
@@ -41,7 +42,7 @@
                 <h3 class="mx-1 text-3xl pt-1.5 pb-10">Spotify</h3>
             </div>
             <h2 class="text-3xl px-32 py-6">Log in to continue.</h2>
-            <form action="">
+            <form>
                 <div id="username" class="flex justify-center text-gray-elapsed">
                     <input type="text" placeholder="Email or username" class="bg-gray-search_field w-80 h-5 py-5 px-2 text-thin rounded focus:outline-none">
                     <span class="material-icons-sharp absolute p-2 ml-64 cursor-pointer">mail_outline</span>
@@ -60,10 +61,24 @@
                 </div>
                 <input type="submit" value="Log In" class="bg-white-basic uppercase mx-24 mt-2 mb-7 py-2.5 px-32 rounded-3xl text-black-basic">
             </form>
-            <div id="form-break" class="flex text-gray-elapsed items-center">
-                <hr class="w-40">
-                <p>OR</p>
-                <hr class="w-40">
+            <div id="form-break" class="flex text-gray-controls justify-center items-center mb-7">
+                <hr class="w-32 opacity-50">
+                <p class="px-5">OR</p>
+                <hr class="w-32 opacity-50">
+            </div>
+            <div id="link-platforms" class="flex-col text-white-basic text-sm">
+                <div id="facebook" class="flex">
+                    <p><input type="button" value="Continue with Facebook" class="cursor-pointer bg-black-basic my-2 mx-24 w-80 h-11 rounded-3xl border border-white-basic"></p>
+                    <i class="fa fa-facebook fa-2x text-white-basic absolute ml-28 mt-4"></i>
+                </div>
+                <div id="google" class="flex">
+                    <p><input type="button" value="Continue with Google" class="cursor-pointer bg-black-basic my-2 mx-24 w-80 h-11 rounded-3xl border border-white-basic"></p>
+                    <i class="fa fa-google fa-2x text-base absolute ml-28 mt-4"></i>
+                </div>
+                <div id="apple" class="flex">
+                    <p><input type="button" value="Continue with Apple" class="cursor-pointer bg-black-basic my-2 mx-24 w-80 h-11 rounded-3xl border border-white-basic"></p>
+                    <i class="fa fa-apple fa-2x text-lg absolute ml-28 mt-4"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -208,7 +223,7 @@
                     </div>
                 </div>
                 <!-- 5 album panels -->
-                <div class="flex justify-between text-white-basic">
+                <div class="flex justify-between text-white-basic -mb-2">
                     <!-- panel 1 -->
                     <div class="album-panel mr-1.5">
                         <div class="w-32 h-32 album shadow-light">
@@ -260,9 +275,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 

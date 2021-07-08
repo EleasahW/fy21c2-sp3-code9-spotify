@@ -15,21 +15,21 @@
 <body>
     <!--left navigation-->
     <div id="all" class="flex cursor-default">
-        <div id="left-main" class="bg-black h-screen w-1/5 pl-5 pt-10 pr-3 text-gray-500">
+        <div id="left-main" class="bg-black-basic h-screen w-1/5 pl-5 pt-10 pr-3 text-gray-artist">
             <div id="general" class="font-sans font-medium text-sm">
             <!--general nav items-->
 
-                <div class="flex py-2 hover:text-gray-400"> <!--make class: nav-hover-->
+                <div class="flex py-2 hover:text-gray-elapsed"> <!--make class: nav-hover-->
                     <i class="material-icons-outlined">home</i>
                     <a href="index.html" class="ml-3">Home</a>
                 </div>
 
-                <div class="flex py-2 hover:text-gray-400">
+                <div class="flex py-2 hover:text-gray-elapsed">
                     <i class="material-icons-outlined">search</i>
                     <a href="#" class="ml-3">Search</a>
                 </div>
 
-                <div class="flex pt-2 pb-8 hover:text-gray-400">
+                <div class="flex pt-2 pb-8 hover:text-gray-elapsed">
                     <i class="material-icons-outlined">library_music</i>
                     <a href="#" class="ml-3">Your Library</a>
                 </div>
@@ -40,12 +40,12 @@
                 <!--@TODO put divs inside of a tag for hover effect-->
 
                 <h3 class="sm:uppercase pb-1">Playlists</h3>
-                <div class="flex items-center py-2 hover:text-gray-400">
+                <div class="flex items-center py-2 hover:text-gray-elapsed">
                     <i class="material-icons-outlined">library_add</i>
                     <a href="#" class="ml-3">Create Playlist</a>
                 </div>
 
-                <div class="flex items-center py-2 hover:text-gray-400">
+                <div class="flex items-center py-2 hover:text-gray-elapsed">
                     <i class="material-icons-outlined">favorite_border</i>
                     <a href="#" class="ml-3">Liked Songs</a>
                 </div>
@@ -55,18 +55,18 @@
 
             <div id="personal" class="flex-col font-semibold text-sm">
                 <!--list of personal playlists-->
-                <a href="#"><div class="py-1.5 hover:text-gray-400">2021 Greatest Songs</div></a>
-                <a href="#"><div class="py-1.5 hover:text-gray-400">At Work</div></a>
-                <a href="playlist.html"><div class="py-1.5 hover:text-gray-400">Playlist #2</div></a>
-                <a href="#"><div class="py-1.5 hover:text-gray-400">Playlist #4</div></a>
-                <a href="#"><div class="py-1.5 hover:text-gray-400">Rap Caviar</div></a>
+                <a href="#"><div class="py-1.5 hover:text-gray-elapsed">2021 Greatest Songs</div></a>
+                <a href="#"><div class="py-1.5 hover:text-gray-elapsed">At Work</div></a>
+                <a href="playlist.html"><div class="py-1.5 hover:text-gray-elapsed">Playlist #2</div></a>
+                <a href="#"><div class="py-1.5 hover:text-gray-elapsed">Playlist #4</div></a>
+                <a href="#"><div class="py-1.5 hover:text-gray-elapsed">Rap Caviar</div></a>
             </div>
         </div>
 
         <!--hero-->
 
-        <div id="hero" class="flex-col h-screen w-4/5 bg-gradient-to-b from-red-500 to-black text-gray-50">
-            <div id="top" class="flex pt-16 pl-8 h-1/2 bg-black bg-opacity-20">
+        <div id="hero" class="flex-col h-screen w-4/5 bg-gradient-to-b from-red-top_upper to-black-basic text-white-basic">
+            <div id="top" class="flex pt-16 pl-8 h-1/2 bg-black-basic bg-opacity-20">
                 <!--top heading-->
                 <div id="album-cover">
                     <img src="https://m.media-amazon.com/images/I/61Y6kHRkq+L._SS500_.jpg" alt="wardell domestic sweater album cover" class="h-56">
@@ -82,16 +82,16 @@
                 </div>
             </div>
 
-            <div id="bottom" class="h-1/2 bg-black bg-opacity-40 px-8 pt-10 items-center text-gray-400">
+            <div id="bottom" class="h-1/2 bg-black-basic bg-opacity-40 px-8 pt-10 items-center text-gray-artist">
                 <div id="nav-bar" class="flex">
                     <!--nav bar w/ icons-->
                     <div id="left" class="mr-80 flex">
                         <!--play icon-->
-                        <span class="pr-8 text-green-500 cursor-pointer hover:text-green-400"><i class="material-icons">play_circle_filled</i></span>
+                        <span class="pr-8 text-green-play text-opacity-90 cursor-pointer hover:text-green-play"><i class="material-icons">play_circle_filled</i></span>
                         <!--download icon-->
-                        <span class="pr-8 cursor-pointer hover:text-gray-50"><i class="material-icons">download_for_offline</i></span>
+                        <span class="pr-8 cursor-pointer hover:text-gray-artist"><i class="material-icons">download_for_offline</i></span>
                         <!--... icon-->
-                        <span class="cursor-pointer hover:text-gray-50"><i class="material-icons">more_horiz</i></span>
+                        <span class="cursor-pointer hover:text-gray-artist"><i class="material-icons">more_horiz</i></span>
                     </div>
 
                     <div id="right" class="flex ml-80">
