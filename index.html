@@ -20,7 +20,6 @@
 </head>
 
 <body class="cursor-default">
-    <!-- side menu and main container, approx 1064px wide?-->
     <div id="home-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center backdrop-blur hidden">
         <!--hidden + bg blur-->
         <div id="home-popup-main" class="w-max h-max p-9 bg-black-basic text-white-basic opacity-100 rounded-xl text-center">
@@ -34,7 +33,7 @@
             <p class="font-thin text-gray-artist">Don't have an account? <a href="#" class="font-thin underline text-gray-elapsed">SIGNUP</a></p>
         </div>
     </div>
-    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center block overflow-y-scroll">
+    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center block overflow-y-scroll hidden">
         <!--hidden + bg blur -->
         <div id="login-popup-main" class="w-max h-max bg-black-basic text-white-basic opacity-100 rounded-xl">
             <div id="brand-header" class="flex text-5xl justify-center pt-3 mt-10">
@@ -69,19 +68,25 @@
             <div id="link-platforms" class="flex-col text-white-basic text-sm">
                 <div id="facebook" class="flex">
                     <p><input type="button" value="Continue with Facebook" class="cursor-pointer bg-black-basic my-2 mx-24 w-80 h-11 rounded-3xl border border-white-basic"></p>
-                    <i class="fa fa-facebook fa-2x text-white-basic absolute ml-28 mt-4"></i>
+                    <i class="fa fa-facebook fa-lg text-white-basic absolute ml-28 mt-6"></i>
                 </div>
                 <div id="google" class="flex">
                     <p><input type="button" value="Continue with Google" class="cursor-pointer bg-black-basic my-2 mx-24 w-80 h-11 rounded-3xl border border-white-basic"></p>
-                    <i class="fa fa-google fa-2x text-base absolute ml-28 mt-4"></i>
+                    <i class="fa fa-google fa-lg text-base absolute ml-28 mt-6"></i>
                 </div>
                 <div id="apple" class="flex">
                     <p><input type="button" value="Continue with Apple" class="cursor-pointer bg-black-basic my-2 mx-24 w-80 h-11 rounded-3xl border border-white-basic"></p>
-                    <i class="fa fa-apple fa-2x text-lg absolute ml-28 mt-4"></i>
+                    <i class="fa fa-apple fa-lg text-lg absolute ml-28 mt-6"></i>
                 </div>
             </div>
+            <div id="login-bottom" class="text-base text-gray-artist flex justify-center mb-14">
+                <p>Don't have an account? <a href="#" class="font-semibold underline text-white-basic font-sans text-base pl-1">SIGNUP</a></p>
+            </div>
+            <p><a href="#" class="uppercase text-sm font-sans text-gray-artist flex justify-center mb-12">Settings</a></p>
         </div>
     </div>
+
+    <!-- side menu and main container, approx 1064px wide?-->
 
     <div class="w-full flex">
         <!-- side menu on left -->
