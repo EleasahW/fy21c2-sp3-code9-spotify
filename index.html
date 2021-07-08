@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
 <!--    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> not working...-->
 </head>
 
-<body>
+<body class="cursor-default">
     <!-- side menu and main container, approx 1064px wide?-->
-    <div id="home-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center">
+    <div id="home-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center backdrop-blur hidden">
         <!--hidden + bg blur-->
         <div id="home-popup-main" class="w-max h-max p-9 bg-black-basic text-white-basic opacity-100 rounded-xl text-center">
             <div id="spotify-header" class="flex text-4xl justify-center pt-3">
@@ -32,19 +33,38 @@
             <p class="font-thin text-gray-artist">Don't have an account? <a href="#" class="font-thin underline text-gray-elapsed">SIGNUP</a></p>
         </div>
     </div>
-    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center hidden">
+    <div id="login-popup" class="w-full h-full bg-gray-border bg-opacity-60 fixed grid place-items-center">
         <!--hidden + bg blur -->
-        <div id="login-popup-main" class="w-96 h-96 bg-black-basic text-white-basic opacity-100">
-            <h3><i class="fa fa-spotify"></i> Spotify</h3>
-            <h2>Log in to continue.</h2>
-            <div id="username" class="">
-                <input type="text" placeholder="Email or username" class="bg-gray-control_bg w-56 h-5 py-2 px-2.5 text-gray-border">
+        <div id="login-popup-main" class="w-max h-max bg-black-basic text-white-basic opacity-100 rounded-xl">
+            <div id="brand-header" class="flex text-5xl justify-center pt-3 mt-10">
+                <p><i class="fa fa-spotify"></i></p>
+                <h3 class="mx-1 text-3xl pt-1.5 pb-10">Spotify</h3>
             </div>
-            <div id="password" class="">
-                <input type="password" placeholder="Password" class="bg-gray-control_bg w-56 h-5 py-2 px-2.5 text-gray-elapsed">
+            <h2 class="text-3xl px-32 py-6">Log in to continue.</h2>
+            <form action="">
+                <div id="username" class="flex justify-center text-gray-elapsed">
+                    <input type="text" placeholder="Email or username" class="bg-gray-search_field w-80 h-5 py-5 px-2 text-thin rounded focus:outline-none">
+                    <span class="material-icons-sharp absolute p-2 ml-64 cursor-pointer">mail_outline</span>
+                </div>
+                <div id="password" class="flex justify-center my-5 text-gray-elapsed">
+                    <input type="password" placeholder="Password" class="bg-gray-search_field w-80 h-5 py-5 px-2 text-thin rounded focus:outline-none">
+                    <span class="material-icons-outlined absolute p-2 ml-64 cursor-pointer">visibility_off</span>
+                </div>
+                <a href="#" class="text-thin text-gray-elapsed underline pl-24 mb-5">Reset Password</a>
+                <div id="remember-me" class="flex justify-between mx-24 my-5">
+                    <p class="text-gray-elapsed">Remember me</p>
+                    <div id="toggle" class="relative cursor-pointer flex">
+                        <div class="block bg-green-play w-11 h-6 rounded-full"></div>
+                        <div class="dot w-6 h-6 absolute bg-white-basic rounded-full transition"></div>
+                    </div>
+                </div>
+                <input type="submit" value="Log In" class="bg-white-basic uppercase mx-24 mt-2 mb-7 py-2.5 px-32 rounded-3xl text-black-basic">
+            </form>
+            <div id="form-break" class="flex text-gray-elapsed items-center">
+                <hr class="w-40">
+                <p>OR</p>
+                <hr class="w-40">
             </div>
-            <a href="#">Reset Password</a>
-            <p>Remember me</p>
         </div>
     </div>
 
