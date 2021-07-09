@@ -1,6 +1,5 @@
-// Pseudo code
+// @TODO: Make Functional Home Overlay
 
-// Goal: Make Functional Home Overlay
 // 1. have an overlay that pops up on load
 // statement: : when the page loads, the hidden on the homeOverlay (#home-popup) will go away.
 const homeOverlay = document.querySelector('#home-popup');
@@ -27,27 +26,19 @@ loginBtn.addEventListener("click", ()=>{
 // if username is less than 7 characters, the statement is false. If password is more than 7 characters, it is true.
 const username = document.querySelector('#username')
 console.log(username);
-/*document.getElementById('username').value.addEventListener('change', ()=>{
-    console.log(Boolean(username.value));
-    if (username.value > 7)
+/*document.getElementById('username').addEventListener('change', ()=>{
+
 });*/
 
-const usernameValue = document.querySelector('#username').valueOf()
 username.addEventListener('change', ()=>{
     if (username.length < 8) {
         alert('minimum length = 8');
-
+        return false;
     } else {
-        const form = document.querySelector('#form').submit();
+        return true;
+        alert()
     }
  });
-
-// document.querySelector('#form').addEventListener('submit', function (evt) {
-//     evt.preventDefault()
-//     console.log(username.value);
-// });
-
-//    if username is larger than 6 characters, it is true. If else, it is false.
 
 // 4. Monitor length of password length
 // if password is less than 9 characters, the statement is false. If password is more than 9 characters, it is true.
@@ -68,19 +59,11 @@ passwordValue.addEventListener('change', ()=>{
 console.log(isPassword())
 */
 
-
-
-// 5. Display message if box length is incorrect *bonus
-
-// 6. all overlays off on click of log-in button
+// 5. all overlays off on click of log-in button
 loginSubmit.addEventListener('click', ()=>{
     loginOverlay.classList.add('hidden');
     return;
 });
 
-
-/*function off() {
-    document.getElementById(homeOverlay).style.display = "none";
-}*/
 
 
