@@ -25,46 +25,29 @@ loginBtn.addEventListener("click", ()=>{
 // 3. Monitor length of username
 // if username is less than 7 characters, the statement is false. If password is more than 7 characters, it is true.
 const username = document.querySelector('#username')
+const password = document.querySelector('#password')
 const form = document.querySelector('#form')
-console.log(username);
-/*document.getElementById('username').addEventListener('change', ()=>{
+const isUsernameValid = checkInput(username.length);
+const isPasswordValid = checkInput(password.length);
 
-});*/
+if (isUsernameValid && isPasswordValid) window.alert("Minimum Username Length = 7. Minimum Password Length = 9. Password Must Contain a Number.");
 
-form.addEventListener('change', ()=>{
-    if (username.length < 8) {
-        alert('minimum length = 8');
-        return false;
-    } else {
-        return true;
-        alert()
-    }
- });
+form.addEventListener("change", (evt) =>{
+    console.log(evt);
+    // window.alert("Minimum Username Length = 7. Minimum Password Length = 9. Password Must Contain a Number.");
+    evt.preventDefault();
+});
+
 
 // 4. Monitor length of password length
 // if password is less than 9 characters, the statement is false. If password is more than 9 characters, it is true.
-/*
-const password = document.querySelector('#password')
-passwordValue.addEventListener('change', ()=>{
-    if (password.value > 7) {
-        return true;
-    } else {
-        return false;
-    };
-});
-*/
-
-/*function isPassword(){
-  return true;
-};
-console.log(isPassword())
-*/
+// password.addEventListener("change", (evt)=>{
+//     console.log(evt)
+// });
 
 // 5. all overlays off on click of log-in button
+//when the user clicks "Log In", the overlay is hidden.
 loginSubmit.addEventListener('click', ()=>{
     loginOverlay.classList.add('hidden');
     return;
 });
-
-
-
