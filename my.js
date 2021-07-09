@@ -5,7 +5,7 @@
 const homeOverlay = document.querySelector('#home-popup');
 console.log(homeOverlay);
 
-window.addEventListener("load", function (){
+window.addEventListener("load", ()=>{
     homeOverlay.classList.remove('hidden');
     return;
 });
@@ -27,14 +27,10 @@ loginBtn.addEventListener("click", ()=>{
 const username = document.querySelector('#username')
 const password = document.querySelector('#password')
 const form = document.querySelector('#form')
-const isUsernameValid = checkInput(username.length);
-const isPasswordValid = checkInput(password.length);
-
-if (isUsernameValid && isPasswordValid) window.alert("Minimum Username Length = 7. Minimum Password Length = 9. Password Must Contain a Number.");
 
 form.addEventListener("change", (evt) =>{
     console.log(evt);
-    // window.alert("Minimum Username Length = 7. Minimum Password Length = 9. Password Must Contain a Number.");
+    window.alert("Minimum Username Length = 7. Minimum Password Length = 9. Password Must Contain a Number.");
     evt.preventDefault();
 });
 
@@ -47,7 +43,7 @@ form.addEventListener("change", (evt) =>{
 
 // 5. all overlays off on click of log-in button
 //when the user clicks "Log In", the overlay is hidden.
-loginSubmit.addEventListener('click', ()=>{
+loginSubmit.addEventListener('submit', ()=>{
     loginOverlay.classList.add('hidden');
     return;
 });
