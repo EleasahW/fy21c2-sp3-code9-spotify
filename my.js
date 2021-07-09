@@ -9,7 +9,7 @@ console.log(homeOverlay);
 window.addEventListener("load", function (){
     homeOverlay.classList.remove('hidden');
     return;
-    });
+});
 
 // 2. have an overlay that pops up on click of "log in" button on first overlay (homeOverlay)
 // statement: when "log in" button is clicked, the home overlay is hidden, and the login overlay is shown.
@@ -27,18 +27,20 @@ loginBtn.addEventListener("click", ()=>{
 // if username is less than 7 characters, the statement is false. If password is more than 7 characters, it is true.
 const username = document.querySelector('#username')
 console.log(username);
-/*document.getElementById('username').value.addEventListener('change', (evt)=>{
+/*document.getElementById('username').value.addEventListener('change', ()=>{
     console.log(Boolean(username.value));
     if (username.value > 7)
 });*/
-username.addEventListener('change', (evt)=> {
-    console.log(evt);
-    if (username.value > 7) {
-        return true;
+
+const usernameValue = document.querySelector('#username').valueOf()
+username.addEventListener('change', ()=>{
+    if (username.length < 8) {
+        alert('minimum length = 8');
+
     } else {
-        return false;
-    };
-});
+        const form = document.querySelector('#form').submit();
+    }
+ });
 
 // document.querySelector('#form').addEventListener('submit', function (evt) {
 //     evt.preventDefault()
@@ -49,10 +51,16 @@ username.addEventListener('change', (evt)=> {
 
 // 4. Monitor length of password length
 // if password is less than 9 characters, the statement is false. If password is more than 9 characters, it is true.
+/*
 const password = document.querySelector('#password')
-password.addEventListener('change', (evt)=>{
-    console.log(evt);
+passwordValue.addEventListener('change', ()=>{
+    if (password.value > 7) {
+        return true;
+    } else {
+        return false;
+    };
 });
+*/
 
 /*function isPassword(){
   return true;
@@ -65,7 +73,7 @@ console.log(isPassword())
 // 5. Display message if box length is incorrect *bonus
 
 // 6. all overlays off on click of log-in button
-loginSubmit.addEventListener('click', function (){
+loginSubmit.addEventListener('click', ()=>{
     loginOverlay.classList.add('hidden');
     return;
 });
