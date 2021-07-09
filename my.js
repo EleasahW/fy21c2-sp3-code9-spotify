@@ -25,12 +25,13 @@ loginBtn.addEventListener("click", ()=>{
 // 3. Monitor length of username
 // if username is less than 7 characters, the statement is false. If password is more than 7 characters, it is true.
 const username = document.querySelector('#username')
+const form = document.querySelector('#form')
 console.log(username);
 /*document.getElementById('username').addEventListener('change', ()=>{
 
 });*/
 
-username.addEventListener('change', ()=>{
+form.addEventListener('change', ()=>{
     if (username.length < 8) {
         alert('minimum length = 8');
         return false;
