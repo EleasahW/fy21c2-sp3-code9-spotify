@@ -41,9 +41,9 @@
                 <h3 class="mx-1 text-3xl pt-1.5 pb-10">Spotify</h3>
             </div>
             <h2 class="text-3xl px-32 py-6">Log in to continue.</h2>
-            <form>
+            <form id="form">
                 <div id="username" class="flex justify-center text-gray-elapsed">
-                    <input type="text" placeholder="Email or username" class="bg-gray-search_field w-80 h-5 py-5 px-2 text-thin rounded focus:outline-none">
+                    <input id="username" type="text" placeholder="Email or username" minlength="7" class="bg-gray-search_field w-80 h-5 py-5 px-2 text-thin rounded focus:outline-none">
                     <span class="material-icons-sharp absolute p-2 ml-64 cursor-pointer">mail_outline</span>
                 </div>
                 <div id="password" class="flex justify-center my-5 text-gray-elapsed">
@@ -58,7 +58,7 @@
                         <div class="dot w-6 h-6 absolute bg-white-basic rounded-full transition"></div>
                     </div>
                 </div>
-                <input type="submit" value="Log In" class="bg-white-basic uppercase mx-24 mt-2 mb-7 py-2.5 px-32 rounded-3xl text-black-basic">
+                <input id="login-complete" type="submit" value="Log In" class="cursor-pointer bg-white-basic uppercase mx-24 mt-2 mb-7 py-2.5 px-32 rounded-3xl text-black-basic">
             </form>
             <div id="form-break" class="flex text-gray-controls justify-center items-center mb-7">
                 <hr class="w-32 opacity-50">
